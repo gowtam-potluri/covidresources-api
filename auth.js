@@ -60,7 +60,7 @@ routes.post('/signin', async (req, res) => {
   };
 
   const token = jwt.sign(credentials, JWT_SECRET);
-  res.cookie('jwt', token, { httpOnly: true, domain: "covidresourcesapp.herokuapp.com" });
+  res.cookie('jwt', token, { httpOnly: true  });
 
   res.json(credentials);
 });
